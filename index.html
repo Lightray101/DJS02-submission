@@ -1,0 +1,106 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>PodcastApp</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap"
+    />
+  </head>
+  <body>
+    <header class="header">
+      <div class="header__logo">
+        <svg
+          class="header__logo-img"
+          viewBox="0 0 24 24"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M12 2C6.48 2 2 6.48 2 12V20C2 21.1 2.9 22 4 22H8C9.1 22 10 21.1 10 20V12C10 8.13 13.13 5 17 5C20.87 5 24 8.13 24 12V20C24 21.1 23.1 22 22 22H18C16.9 22 16 21.1 16 20V12C16 6.48 13.55 2.8 12 2Z"
+            fill="#333"
+          />
+        </svg>
+
+        <h1 class="header__title">Podcast-App</h1>
+      </div>
+      <div class="header__actions">
+        <button class="header__search-btn" aria-label="Search">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          >
+            <circle cx="11" cy="11" r="8"></circle>
+            <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+          </svg>
+        </button>
+        <img
+          src="https://img.icons8.com/ios-glyphs/30/000000/user-male-circle.png"
+          alt="User Profile"
+          class="header__profile-img"
+        />
+      </div>
+    </header>
+
+    <main class="main-content">
+      <section class="filters">
+        <span class="filters__label">Filter by:</span>
+        <div class="filters__dropdown-container">
+          <select id="genre-filter" class="filters__dropdown">
+            <option value="all">All Genres</option>
+            <option value="genre-1">Genre 1</option>
+            <option value="genre-2">Genre 2</option>
+            <option value="genre-3">Genre 3</option>
+            <option value="genre-4">Genre 4</option>
+          </select>
+        </div>
+        <div class="filters__dropdown-container">
+          <select id="sort-filter" class="filters__dropdown">
+            <option value="updated-desc">Recently Updated</option>
+            <option value="popular-desc">Most Popular</option>
+            <option value="newest-desc">Newest</option>
+          </select>
+        </div>
+      </section>
+
+      <section id="podcast-grid" class="podcast-grid">
+        <!-- Podcast previews will be injected here by JavaScript using Web Components -->
+      </section>
+    </main>
+
+    <div id="modal" class="modal" aria-hidden="true">
+      <div class="modal__overlay" tabindex="-1" data-micromodal-close>
+        <div
+          class="modal__container"
+          role="dialog"
+          aria-modal="true"
+          aria-labelledby="modal-title"
+        >
+          <header class="modal__header">
+            <button
+              class="modal__close"
+              aria-label="Close modal"
+              data-micromodal-close
+            >
+              &#x2715;
+            </button>
+          </header>
+          <main id="modal-content" class="modal__content">
+            <!-- Modal content will be injected here by JavaScript -->
+          </main>
+        </div>
+      </div>
+    </div>
+
+    <script src="js/main.js" type="module"></script>
+  </body>
+</html>
